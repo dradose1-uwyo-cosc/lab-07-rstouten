@@ -19,9 +19,24 @@
 
 factorial = 1
 
+while True:
+    upper_bound = input("Enter a number and I will give you its factorial: ")
+
+    if upper_bound.isdigit():
+        upper_bound = int(upper_bound)
+        if upper_bound > 0:
+            for i in range(1, upper_bound + 1):
+                factorial *= i 
+            break
+        else:
+            print("Please enter a positive number.")
+    else:
+        print("Please enter a number.")
+     
 print(f"The result of the factorial based on the given bound is {factorial}")
 
-print("*"*75)
+print("*" * 75)
+
 # Create a while loop that prompts a user for input of an integer values
 # Sum all inputs. When the user enters 'exit' (regardless of casing) end the loop
 # Upon ending the loop print the sum
